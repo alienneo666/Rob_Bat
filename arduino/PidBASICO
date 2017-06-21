@@ -1,0 +1,25 @@
+   }
+  if (adelante != 0){   // no se permite que se envie el comando hacia adelante y hacia atras al tiempo 
+     if (atras == 0){  
+       analogWrite(llantaI,adelante);
+       digitalWrite(6,LOW);
+       digitalWrite(7,HIGH);
+     
+       analogWrite(llantaD,adelante);
+       digitalWrite(4,LOW);
+       digitalWrite(5,HIGH);
+     }
+  }
+ 
+  if (atras != 0){         // no se permite que se envie el comando hacia adelante y hacia atras al tiempo 
+     if (adelante == 0){
+       analogWrite(llantaI,atras);
+       digitalWrite(6,HIGH);
+       digitalWrite(7,LOW);
+     
+       analogWrite(llantaD,atras);
+       digitalWrite(4,HIGH);
+       digitalWrite(5,LOW);
+    }
+  }
+}
